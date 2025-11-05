@@ -34,7 +34,6 @@ import MeigenDanmaku from '@/components/MeigenDanmaku.vue'
 <style>
 .card {
   opacity: 0.9;
-  height: 80vh;
 }
 
 h1 {
