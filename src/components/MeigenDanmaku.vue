@@ -9,9 +9,11 @@ const danmakuStore = useDanmakuStore()
 const meigenStore = useMeigenStore()
 
 onMounted(() => {
+  //読み込まれたときにリセットする。これがないとなんかエラーになる。
   randomStore.reset()
   danmakuStore.danmakuP = []
 
+  //リセットした分を埋め込む
   meigenStore.meigenList.forEach((_, i) => {
     randomStore.randomSet()
     danmakuStore.PositionXstart(i)
@@ -19,6 +21,7 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
+  //Domが消えるときセットインターバルをリセットする。
   clearInterval(danmakuStore.PositionFun)
 })
 </script>
@@ -45,7 +48,7 @@ onBeforeUnmount(() => {
   position: relative;
   width: 100%;
   height: 350px;
-  border: 1px solid #000;
+  border: 1px solid grey;
   overflow: hidden;
 }
 </style>

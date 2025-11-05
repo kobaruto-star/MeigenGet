@@ -20,4 +20,11 @@ const addFavorite = () => {
   border-top: 2px solid rgba(128, 128, 128, 0.5);
   padding-top: 5px;
 }
+
+.btn {
+  opacity: 0.8;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+}
 </style>

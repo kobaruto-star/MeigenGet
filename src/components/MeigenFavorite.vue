@@ -7,7 +7,7 @@ const favoriteStore = useFavoriteStore()
   <div>
     <v-container>
       <v-row justify="center">
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="12">
           <li v-for="fav in favoriteStore.favoriteList" :key="fav.id">
             <div class="favmeigen">
               <h2>{{ fav.meigen }}</h2>

@@ -50,7 +50,7 @@ const randomSet = () => {
 .meigen-area {
   margin-top: 30px;
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: serif;
 }
 
 .meigen {
@@ -69,7 +69,6 @@ const randomSet = () => {
   display: flex;
   align-items: center;
   gap: 50px;
-  display: flex;
   padding-bottom: 5px;
   border-bottom: 2px solid rgba(128, 128, 128, 0.5);
 }

@@ -18,7 +18,7 @@ const countSet = (value) => {
 let count = ref(0)
 </script>
 <template>
-  <p class="subtext">難易度を入力してください（選択肢の数）</p>
+  <p class="subtext C">難易度を入力してください（選択肢の数）</p>
 
   <v-container>
     <v-row justify="center">
@@ -44,5 +44,9 @@ let count = ref(0)
 <style>
 .quizstart {
   text-align: center;
+}
+.C {
+  text-align: center;
+  padding-bottom: 0;
 }
 </style>
