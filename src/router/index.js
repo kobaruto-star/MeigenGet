@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import MeigenGet from '../views/MeigenGetView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -16,12 +17,22 @@ const router = createRouter({
     {
       path: '/meigenget',
       name: 'meigenget',
-      component: () => import('../views/MeigenGetView.vue'),
+      component: MeigenGet,
     },
     {
       path: '/meigenquiz',
       name: 'meigenquiz',
       component: () => import('../views/MeigenQuizView.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/MeigenLogin.vue'),
+    },
+    {
+      path: '/timeline',
+      name: 'timeline',
+      component: () => import('../views/TimelineView.vue'),
     },
   ],
 })

@@ -7,6 +7,8 @@ export const useMenuStore = defineStore('menu', {
       { title: '名言取得', path: '/meigenget' },
       { title: 'お気に入り', path: '/favorites' },
       { title: '名言クイズ', path: '/meigenquiz' },
+      { title: 'ログイン', path: '/login' },
+      { title: 'タイムライン', path: '/timeline' },
     ],
   }),
 })

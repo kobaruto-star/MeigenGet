@@ -84,6 +84,22 @@ h1:hover {
   background-repeat: no-repeat;
   background-position: bottom;
 }
+.maintext5 {
+  padding-bottom: 5px;
+  border-bottom: 5px solid transparent;
+  background: linear-gradient(to right, black 10%, gray 50%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.maintext6 {
+  padding-bottom: 5px;
+  border-bottom: 5px solid transparent;
+  background: linear-gradient(to right, purple 10%, gray 50%);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
 p {
   font-weight: 500;

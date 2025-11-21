@@ -3,12 +3,14 @@ import { RouterView } from 'vue-router'
 import { useMenuStore } from './stores/menuStore'
 import { useImgStore } from './stores/imgStore'
 import { onMounted } from 'vue'
+import { useUserStore } from './stores/userStore'
 
 const menuStore = useMenuStore()
 const imgStore = useImgStore()
+const userStore = useUserStore()
 
-const headtext = ['ホーム', '名言取得', 'お気に入り', '名言クイズ']
-const color = ['red', 'blue', 'yellow', 'green']
+const headtext = ['ホーム', '名言取得', 'お気に入り', '名言クイズ', 'ログイン', 'タイムライン']
+const color = ['red', 'blue', 'yellow', 'green', 'grey', 'purple']
 let imgcount
 
 //DOMをよんだときにgetimgを動かし、5sおきに動かす。
@@ -27,6 +29,14 @@ onMounted(() => {
     <div class="header-left">
       <p>MeigenGet!</p>
     </div>
+    <div>
+      <div v-if="userStore.isLoggedIn" class="header-right">
+        <p>ログイン：{{ userStore.loginUsername }}さん</p>
+      </div>
+      <div v-if="!userStore.isLoggedIn" class="header-right">
+        <p>ログイン：ゲストさん</p>
+      </div>
+    </div>
 
     <!--上部メニュー -->
     <div class="menu">
@@ -37,8 +47,8 @@ onMounted(() => {
             <v-col
               v-for="(item, index) in menuStore.items"
               :key="item"
-              cols="3"
-              md="3"
+              cols="2"
+              md="2"
               class="menuA"
             >
               <v-item v-slot="{ isSelected, toggle }" class="menuA">
@@ -123,5 +133,14 @@ header {
 .main-content {
   position: relative;
   z-index: 1;
+}
+
+.header-right {
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  font-family: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-size: 14px;
+  color: skyblue;
 }
 </style>

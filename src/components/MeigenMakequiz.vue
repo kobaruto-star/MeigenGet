@@ -31,7 +31,7 @@ let count = ref(0)
           :inset="false"
           v-model="count"
         ></v-number-input>
-        <div class="quizstart">
+        <div class="center">
           <v-btn class="btn" @click="(countSet(count), quizstart(), getLoadingDot())"
             >スタート</v-btn
           >
@@ -42,7 +42,7 @@ let count = ref(0)
 </template>
 
 <style>
-.quizstart {
+.center {
   text-align: center;
 }
 .C {

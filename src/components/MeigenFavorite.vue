@@ -8,13 +8,17 @@ const favoriteStore = useFavoriteStore()
     <v-container>
       <v-row justify="center">
         <v-col cols="12" md="12">
+          <div class="center">
+            <v-btn class="btn" @click="favoriteStore.refavorite()">更新</v-btn>
+          </div>
+
           <li v-for="fav in favoriteStore.favoriteList" :key="fav.id">
             <div class="favmeigen">
               <h2>{{ fav.meigen }}</h2>
             </div>
             <div class="favauther">
               <v-row justify="end">
-                <h3>{{ fav.auther }}</h3>
+                <h3>{{ fav.auther_name }}</h3>
               </v-row>
             </div>
           </li>

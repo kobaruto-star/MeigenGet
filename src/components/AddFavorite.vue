@@ -7,11 +7,14 @@ const favoriteStore = useFavoriteStore()
 const addFavorite = () => {
   favoriteStore.addFavorite(meigenStore.meigenTmp)
 }
+const addFavoriteDB = async () => {
+  await favoriteStore.addFavoriteDB(meigenStore.meigenTmp)
+}
 </script>
 
 <template>
   <div class="favorite">
-    <v-btn class="btn" @click="addFavorite()">お気に入りに追加</v-btn>
+    <v-btn class="btn" @click="(addFavorite(), addFavoriteDB())">お気に入りに追加</v-btn>
   </div>
 </template>
 
