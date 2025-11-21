@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/timeline',
       name: 'timeline',
-      component: () => import('../views/TimelineView.vue'),
+      component: () => import('../views/TimeLineView.vue'),
     },
   ],
 })

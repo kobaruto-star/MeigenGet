@@ -19,8 +19,12 @@
             </div>
             <div class="subtext"><p>コメントを残せます。</p></div>
 
-            <v-text-field label="コメントをかいてね" variant="underlined"></v-text-field>
-            <v-btn class="btn" style="float: right">送信</v-btn>
+            <v-text-field
+              label="コメントをかいてね"
+              variant="underlined"
+              v-model="Comment"
+            ></v-text-field>
+            <v-btn class="btn" style="float: right" @click="">送信</v-btn>
             <!---<li v-for="fav in " :key="fav.id"></li>-->
 
             <MeigenFavorite />
